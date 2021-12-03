@@ -2,16 +2,16 @@
 
 public class AppDataInput
 {
-    string folderDataPath = @"..\..\..\..\..\AdventOfCode2020-InputDataReader\Data\";
+    string folderDataPath = @"..\..\..\..\..\AdventOfCode2021.Shared\Data\";
 
     public List<string> ReadData(string dataInputFile)
     {
         string inputDataPath = folderDataPath + dataInputFile;
-        List<string> returnString = new List<string>();
+        List<string> returnString = new();
         using (StreamReader reader = File.OpenText(inputDataPath))
         {
-            string line = "";
-            while ((line = reader.ReadLine()) != null)
+            string? line = "";
+            while ((line = reader.ReadLine()) is not null)
             {
                 returnString.Add(line);
             }
@@ -22,9 +22,9 @@ public class AppDataInput
     public List<Dictionary<string, string>> ReadKeyValue(string dataInputFile, string separator1, string separator2)
     {
         StreamReader reader = File.OpenText(folderDataPath + dataInputFile);
-        Dictionary<string, string> dictionary = new Dictionary<string, string>();
-        List<Dictionary<string, string>> dictionaryList = new List<Dictionary<string, string>>();
-        string row;
+        Dictionary<string, string> dictionary = new();
+        List<Dictionary<string, string>> dictionaryList = new();
+        string? row;
         while ((row = reader.ReadLine()) is not null)
         {
             if (row is "")
@@ -42,7 +42,7 @@ public class AppDataInput
                 }
             }
         }
-        if (dictionary.Count() > 0)
+        if (dictionary.Count > 0)
             dictionaryList.Add(dictionary);
         return dictionaryList;
     }
