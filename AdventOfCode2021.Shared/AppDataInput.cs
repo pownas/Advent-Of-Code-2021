@@ -2,7 +2,7 @@
 
 public class AppDataInput
 {
-    string folderDataPath = @"..\..\..\..\..\AdventOfCode2021.Shared\Data\";
+    string folderDataPath = @"..\..\..\..\..\AdventOfCode2021.Shared\inputData\";
 
     public List<string> ReadData(string dataInputFile)
     {
