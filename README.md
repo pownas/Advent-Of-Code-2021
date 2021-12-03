@@ -10,7 +10,7 @@ Check other examples of the solutions in: https://github.com/kodsnack/advent_of_
 
 | Day | Part 1 | Part 2 |
 | --- | --- | --- |
-|  1  |  |  |
+|  1  | :star: |  |
 |  2  |  |  |
 |  3  |  |  |
 |  4  |  |  |
